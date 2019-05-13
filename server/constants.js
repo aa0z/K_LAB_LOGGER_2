@@ -1,0 +1,10 @@
+const PORT = process.env.PORT || 3000
+const RANGE_START = -1
+const RANGE_OFFSET = -20
+const DATA = 'data'
+const DATA_KEYS = 'data_keys'
+const LOGS = 'logs'
+const LOGS_KEYS = 'logs_keys'
+const EVENT_LOGIN = 'EVENT_LOGIN'
+const EVENT_DATA_ADDED = 'EVENT_DATA_ADDED'
+module.exports = {PORT, RANGE_START, RANGE_OFFSET, DATA, DATA_KEYS, LOGS, LOGS_KEYS, EVENT_LOGIN, EVENT_DATA_ADDED}

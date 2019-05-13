@@ -1,0 +1,20 @@
+app:
+  build: ./node
+  volumes:
+    - ./server:/var/www/app
+  ports:
+    - 3000:3000
+  environment:
+    - NODE_ENV=development
+    - PORT=3000
+  command:
+    sh -c 'npm i && npm install nodemon -g && nodemon index.js'
+  links:
+    - redis
+  environment:
+    - REDIS_URL=redis://db
+redis:
+  image: redis
+  container_name: db
+  expose:
+    - 6379
